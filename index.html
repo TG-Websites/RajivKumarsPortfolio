@@ -385,51 +385,29 @@
     }
   </script>
 
-   <style>
-    #home {
-      background-image: url('./assets/black\ bg2.jpg');
-      background-repeat: repeat;
-      background-size: cover;
-      background-position: center;
-      will-change: background-position;
-    }
-    #home .content > * {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s ease;
-    }
-    #home.in-view .content > * {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .orbit {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      animation: spin 20s linear infinite;
-    }
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-    .bubble-circle {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      border-radius: 9999px;
-      background: rgba(255,255,255,0.3);
-    }
-    .bubble1 {
-      top: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    .bubble2 {
-      bottom: -10px;
-      right: 50%;
-      transform: translateX(50%);
-    }
-  </style>
+<style>
+  #home {
+    background-image: url('./assets/black\\ bg2.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    will-change: background-position;
+  }
+
+  #home .content > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+  }
+
+  #home.in-view .content > * {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  
+</style>
+
 
 
 </head>
@@ -437,66 +415,96 @@
 
 
     
-  <!-- Header -->
- <header class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-90">
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-90">
   <div class="max-w-7xl mx-auto flex justify-between items-center py-5 px-6">
     <!-- Logo / Name -->
     <h1 class="text-2xl md:text-3xl font-bold text-white">
       <span class="text-accent">राजीव</span> कुमार सिंह<span class="text-yellow-500">.</span>
     </h1>
 
-    <!-- Navigation -->
+    <!-- Desktop Navigation -->
     <nav class="space-x-6 hidden md:flex">
       <a href="#home" class="hover:text-accent transition">Home</a>
       <a href="#about" class="hover:text-accent transition">About</a>
       <a href="#services" class="hover:text-accent transition">Achievements</a>
-      <a href="#blogs" class="hover:text-accent transition">Blogs</a>
+      <a href="#gallery" class="hover:text-accent transition">Gallery</a>
       <a href="#contact" class="hover:text-accent transition">Contact</a>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button id="menu-btn" class="md:hidden flex flex-col space-y-1 focus:outline-none">
+      <span class="block w-6 h-0.5 bg-white"></span>
+      <span class="block w-6 h-0.5 bg-white"></span>
+      <span class="block w-6 h-0.5 bg-white"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-95">
+    <nav class="flex flex-col space-y-4 py-4 px-6">
+      <a href="#home" class="text-white hover:text-accent transition">Home</a>
+      <a href="#about" class="text-white hover:text-accent transition">About</a>
+      <a href="#services" class="text-white hover:text-accent transition">Achievements</a>
+      <a href="#gallery" class="text-white hover:text-accent transition">Gallery</a>
+      <a href="#contact" class="text-white hover:text-accent transition">Contact</a>
     </nav>
   </div>
 </header>
 
 
+
   <!-- Hero Section -->
-  <section
-    id="home"
-    class="min-h-screen flex items-center pt-24 relative"
-  >
-    <div class="absolute inset-0 bg-black/50 z-0"></div>
-    <div class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center px-6 gap-8 w-full z-10 content">
-      <div class="space-y-4">
-        <p class="text-yellow-400 uppercase tracking-wide">जनसेवक</p>
-        <h2 class="text-4xl sm:text-5xl font-bold">
-          नमस्ते, मैं <span class="text-yellow-400">राजीव कुमार सिंह</span>
-        </h2>
-        <h3 class="text-2xl sm:text-3xl font-semibold">दीघा से आपके लिए</h3>
-        <p class="text-gray-300 max-w-md">
-          विकास, शिक्षा और रोजगार के लिए आपके साथ कदम से कदम मिलाकर चलने का संकल्प।
-        </p>
-        <div class="flex gap-4 pt-4">
-          <a href="#contact"
-            class="inline-block bg-yellow-400 text-black font-semibold px-6 py-3 rounded hover:opacity-90 transition">
-            संपर्क करें
-          </a>
-          <a href="#about"
-            class="inline-block border border-yellow-400 text-yellow-400 font-semibold px-6 py-3 rounded hover:bg-yellow-400 hover:text-black transition">
-            हमारा विजन
-          </a>
-        </div>
+<section id="home" class="min-h-screen flex items-center pt-24 relative">
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/50 z-0"></div>
+
+  <!-- Content Wrapper -->
+  <div class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center px-6 gap-8 w-full z-10">
+    
+    <!-- Image Column -->
+    <div class="relative flex justify-center items-center w-96 h-96 mx-auto order-1 md:order-2">
+      <!-- Static Round Image -->
+      <div class="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-yellow-400 shadow-lg z-10">
+        <img src="./assets/portfolio img.png" alt="Rajiv Kumar Singh" class="object-cover w-full h-full" />
       </div>
-      <div class="relative flex justify-center items-center w-96 h-96 mx-auto">
-        <div class="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-yellow-400 shadow-lg z-10">
-          <img src="./assets/rajiv profile pic.jpg" alt="Rajiv Kumar Singh" class="object-cover w-full h-full" />
-        </div>
-        <div class="absolute w-[380px] h-[380px] md:w-[430px] md:h-[430px] z-0 rounded-full border border-yellow-400/20">
-          <div class="orbit">
-            <div class="bubble-circle bubble1"></div>
-            <div class="bubble-circle bubble2"></div>
-          </div>
-        </div>
+
+      <!-- Floating Bubbles -->
+  <!-- Bubbles Container -->
+<!-- <div class="absolute inset-0 z-0">
+  <div class="bubble float1"></div>
+  <div class="bubble float2"></div>
+  <div class="bubble float3"></div>
+  <div class="bubble float4"></div>
+  <div class="bubble float5"></div>
+</div> -->
+
+    </div>
+
+    <!-- Text Column -->
+    <div class="space-y-4 order-2 md:order-1 pb-8">
+      <p class="text-yellow-400 uppercase tracking-wide">जनसेवक</p>
+      <h2 class="text-4xl sm:text-5xl font-bold">
+        नमस्ते, मैं <span class="text-yellow-400">राजीव कुमार सिंह</span>
+      </h2>
+      <h3 class="text-2xl sm:text-3xl font-semibold">दीघा से आपके लिए</h3>
+      <p class="text-gray-300 max-w-md">
+        विकास, शिक्षा और रोजगार के लिए आपके साथ कदम से कदम मिलाकर चलने का संकल्प।
+      </p>
+      <div class="flex gap-4 pt-4">
+        <a href="#contact" class="inline-block bg-yellow-400 text-black font-semibold px-6 py-3 rounded hover:opacity-90 transition">
+          संपर्क करें
+        </a>
+        <a href="#about" class="inline-block border border-yellow-400 text-yellow-400 font-semibold px-6 py-3 rounded hover:bg-yellow-400 hover:text-black transition">
+          हमारा विजन
+        </a>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
+
+
 
 
 
@@ -509,7 +517,7 @@
     
     <!-- Image -->
     <div class="rounded-xl overflow-hidden bg-gray-800 h-[35rem] md:h-[38rem] shadow-lg">
-      <img src="./assets/rajiv profile pic.jpg" alt="Rajiv Kumar Singh" class="object-cover w-full h-full">
+      <img src="./assets/gallery2.jpg" alt="Rajiv Kumar Singh" class="object-cover w-full h-full">
     </div>
 
     <!-- Content -->
@@ -638,7 +646,7 @@
 
 
 
-  <section id="services" class="pb-20 bg-bgSection text-white">
+  <section id="services" class="py-20 bg-black text-white">
   <div class="max-w-6xl mx-auto px-6">
     <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
   <span class="text-accent">My</span> 
@@ -648,7 +656,7 @@
     <div class="grid md:grid-cols-3 gap-8">
       <!-- Card 1 -->
       <div class="group relative rounded-xl overflow-hidden cursor-pointer">
-        <img src="./assets/rajiv2.jpg" alt="Development Projects" class="w-full h-full object-cover transform duration-500 group-hover:scale-110">
+        <img src="./assets/gallery1.jpg" alt="Development Projects" class="w-full h-full object-cover transform duration-500 group-hover:scale-110">
         <!-- Gradient Overlay -->
         <div class="absolute inset-0 bg-gradient-to-b from-[#E6B400]/90 via-[#E6B400]/90 to-black/95 opacity-0 group-hover:opacity-100 transition duration-500"></div>
         <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 text-center p-4">
@@ -667,7 +675,7 @@
 
       <!-- Card 2 -->
       <div class="group relative rounded-xl overflow-hidden cursor-pointer">
-        <img src="./assets/rajiv3.jpg" alt="Skill Development" class="w-full h-full object-cover transform duration-500 group-hover:scale-110">
+        <img src="./assets/gallery3.jpg" alt="Skill Development" class="w-full h-full object-cover transform duration-500 group-hover:scale-110">
         <div class="absolute inset-0 bg-gradient-to-b from-[#E6B400]/90 via-[#E6B400]/90 to-black/95 opacity-0 group-hover:opacity-100 transition duration-500"></div>
         <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 text-center p-4">
           <h3 class="text-xl font-semibold text-white mb-2">Skill Development Centers</h3>
@@ -685,7 +693,7 @@
 
       <!-- Card 3 -->
       <div class="group relative rounded-xl overflow-hidden cursor-pointer">
-        <img src="./assets/rajiv 4.jpg" alt="Education Reforms" class="w-full h-full object-cover transform duration-500 group-hover:scale-110">
+        <img src="./assets/gallery2.jpg" alt="Education Reforms" class="w-full h-full object-cover transform duration-500 group-hover:scale-110">
         <div class="absolute inset-0 bg-gradient-to-b from-[#E6B400]/90 via-[#E6B400]/90 to-black/95 opacity-0 group-hover:opacity-100 transition duration-500"></div>
         <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 text-center p-4">
           <h3 class="text-xl font-semibold text-white mb-2">Education Reforms</h3>
@@ -711,15 +719,62 @@
 </section>
 
 
+<!-- Gallery Section -->
+<section id="gallery" class="bg-bgSection text-gray-300 body-font py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Heading + Paragraph -->
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">
+      <span class="text-yellow-400">हमारी</span>
+      <span class="underline decoration-yellow-400">गैलरी</span>
+    </h2>
+    <p class="text-base leading-relaxed text-gray-400 text-center mb-12 max-w-3xl mx-auto">
+      विकास, सेवा और समर्पण के पलों की एक झलक — आइए देखें हमारी यात्रा की कुछ झलकियां।
+    </p>
 
-<section id="blogs" class="pb-20 bg-bgSection text-white">
+    <!-- Gallery Grid -->
+    <div class="flex flex-wrap -m-1 md:-m-2">
+      <!-- Left Column -->
+      <div class="flex flex-wrap w-full md:w-1/2">
+        <div class="w-1/2 p-1 md:p-2">
+          <img class="w-full aspect-video object-cover rounded shadow-md hover:scale-105 transition" src="./assets/gallery1.jpg" />
+        </div>
+        <div class="w-1/2 p-1 md:p-2">
+          <img class="w-full aspect-video object-cover rounded shadow-md hover:scale-105 transition" src="./assets/gallery2.jpg" />
+        </div>
+        <div class="w-full p-1 md:p-2">
+          <img class="w-full aspect-video object-cover rounded shadow-md hover:scale-105 transition" src="./assets/gallery3.jpg" alt="gallery" />
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="flex flex-wrap w-full md:w-1/2">
+        <div class="w-full p-1 md:p-2">
+          <img class="w-full aspect-video object-cover rounded shadow-md hover:scale-105 transition" src="./assets/gallery4.jpg" alt="gallery" />
+        </div>
+        <div class="w-1/2 p-1 md:p-2">
+          <img class="w-full aspect-video object-cover rounded shadow-md hover:scale-105 transition" src="./assets/gallery5.jpg" alt="gallery" />
+        </div>
+        <div class="w-1/2 p-1 md:p-2">
+          <img class="w-full aspect-video object-cover rounded shadow-md hover:scale-105 transition" src="./assets/gallery3.jpg" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- <section id="blogs" class="pt-20 pb-20 bg-bgSection text-white relative z-0">
   <div class="max-w-6xl mx-auto px-6">
    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
   <span class="text-accent">Latest</span> <span class="underline decoration-accent">Blogs</span>
 </h2>
 
     <div class="grid md:grid-cols-3 gap-8">
-      <!-- Blog Card 1 -->
+      
       <div class="flex flex-col border-2 border-accent rounded-xl overflow-hidden hover:shadow-lg transition duration-300 h-full">
         <img class="h-48 w-full object-cover object-center" src="./assets/rajiv2.jpg" alt="blog">
         <div class="flex-1 flex flex-col justify-between p-6">
@@ -737,7 +792,7 @@
         </div>
       </div>
 
-      <!-- Blog Card 2 -->
+
       <div class="flex flex-col border-2 border-accent rounded-xl overflow-hidden hover:shadow-lg transition duration-300 h-full">
         <img class="h-48 w-full object-cover object-center" src="./assets/rajiv3.jpg" alt="blog">
         <div class="flex-1 flex flex-col justify-between p-6">
@@ -755,7 +810,7 @@
         </div>
       </div>
 
-      <!-- Blog Card 3 -->
+     
       <div class="flex flex-col border-2 border-accent rounded-xl overflow-hidden hover:shadow-lg transition duration-300 h-full">
         <img class="h-48 w-full object-cover object-center" src="./assets/rajiv 4.jpg" alt="blog">
         <div class="flex-1 flex flex-col justify-between p-6">
@@ -774,14 +829,14 @@
       </div>
     </div>
 
-    <!-- Centered Button -->
+  
     <div class="text-center mt-10">
       <a href="#all-blogs" class="inline-block px-6 py-3 border border-accent text-accent font-semibold rounded hover:bg-accent hover:text-black transition">
         सभी ब्लॉग देखें
       </a>
     </div>
   </div>
-</section>
+</section> -->
 
 
 
@@ -881,6 +936,14 @@
       { threshold: 0.3 }
     );
     observer.observe(document.getElementById("home"));
+
+
+      const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
   </script>
 </body>
 </html>
