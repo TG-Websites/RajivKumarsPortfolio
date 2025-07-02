@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Contributions - Rajiv Kumar Singh</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #000; /* Black background */
+      color: #fff;
+
+    }
+  </style>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#E6B400',
+            bgSection: '#1a1a1a',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body>
+
+ <!-- Header -->
+<header class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-90">
+  <div class="max-w-7xl mx-auto flex justify-between items-center py-5 px-6">
+    <!-- Logo / Name -->
+    <h1 class="text-2xl md:text-3xl font-bold text-white">
+      <span class="text-accent">राजीव</span> कुमार सिंह<span class="text-yellow-500">.</span>
+    </h1>
+
+    <!-- Desktop Navigation -->
+    <nav class="space-x-6 hidden md:flex">
+      <a href="./index.html" class="hover:text-accent transition">Home</a>
+      <a href="./index.html#about" class="hover:text-accent transition">About</a>
+      <a href="./index.html#services" class="hover:text-accent transition">Achievements</a>
+      <a href="./index.html#gallery" class="hover:text-accent transition">Gallery</a>
+      <a href="./index.html#contact" class="hover:text-accent transition">Contact</a>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button id="menu-btn" class="md:hidden flex flex-col space-y-1 focus:outline-none">
+      <span class="block w-6 h-0.5 bg-white"></span>
+      <span class="block w-6 h-0.5 bg-white"></span>
+      <span class="block w-6 h-0.5 bg-white"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-95">
+    <nav class="flex flex-col space-y-4 py-4 px-6">
+      <a href="./index.html#home" class="text-white hover:text-accent transition">Home</a>
+      <a href="./index.html#about" class="text-white hover:text-accent transition">About</a>
+      <a href="./index.html#services" class="text-white hover:text-accent transition">Achievements</a>
+      <a href="./index.html#gallery" class="text-white hover:text-accent transition">Gallery</a>
+      <a href="./index.html#contact" class="text-white hover:text-accent transition">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+
+
+<!-- Hero Section -->
+<section
+  class="relative flex items-center justify-center min-h-[70vh] pt-24"
+  style="
+    background-image: url('./assets/gallery4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  "
+>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-3xl text-center px-6">
+    <h1 class="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">
+      <span class="text-yellow-400">Our Journey</span> of <br class="hidden md:block" />
+      Service & Transformation
+    </h1>
+    <p class="text-gray-300 text-base md:text-lg mb-6 leading-relaxed">
+      विकास, बदलाव और जनसेवा के अनमोल पलों की एक झलक – 
+      हमारे क्षेत्र को नई ऊंचाइयों तक पहुँचाने के संकल्प की कहानी।
+    </p>
+    <a
+      href="#gallery"
+      class="inline-block bg-yellow-400 text-black font-semibold px-6 py-3 rounded hover:opacity-90 transition"
+    >
+    
+      <span>Explore Gallery</span>
+    </a>
+  </div>
+</section>
+
+
+
+  <!-- Page Title -->
+  <section class="py-12 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+      मेरी सभी <span class="text-yellow-400">Contributions</span>
+    </h2>
+    <p class="text-gray-400">विकास के हर कदम पर जनता के साथ</p>
+  </section>
+
+  <!-- Contributions Grid -->
+  <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 pb-20">
+    <!-- Card 1 -->
+    <div class="group relative rounded-xl overflow-hidden cursor-pointer">
+      <img src="./assets/gallery1.jpg" alt="Infrastructure" class="w-full h-full object-cover transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-b from-yellow-400/90 via-yellow-400/90 to-black/95 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 text-center p-4">
+        <h3 class="text-xl font-semibold mb-2">Infrastructure Development</h3>
+        <p class="text-black mb-4">सड़कों और सामुदायिक भवनों का निर्माण कर सुविधाएं पहुँचाईं।</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="group relative rounded-xl overflow-hidden cursor-pointer">
+      <img src="./assets/gallery2.jpg" alt="Education" class="w-full h-full object-cover transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-b from-yellow-400/90 via-yellow-400/90 to-black/95 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 text-center p-4">
+        <h3 class="text-xl font-semibold mb-2">Education Reforms</h3>
+        <p class="text-black mb-4">स्कूलों में स्मार्ट क्लास और लाइब्रेरी की व्यवस्था।</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="group relative rounded-xl overflow-hidden cursor-pointer">
+      <img src="./assets/gallery3.jpg" alt="Skill Development" class="w-full h-full object-cover transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-b from-yellow-400/90 via-yellow-400/90 to-black/95 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 text-center p-4">
+        <h3 class="text-xl font-semibold mb-2">Skill Development</h3>
+        <p class="text-black mb-4">युवाओं के लिए रोजगार उन्मुख प्रशिक्षण।</p>
+      </div>
+    </div>
+
+    <!-- More Cards (you can duplicate these) -->
+    <div class="group relative rounded-xl overflow-hidden cursor-pointer">
+      <img src="./assets/gallery4.jpg" alt="Healthcare" class="w-full h-full object-cover transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-b from-yellow-400/90 via-yellow-400/90 to-black/95 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 text-center p-4">
+        <h3 class="text-xl font-semibold mb-2">Healthcare Camps</h3>
+        <p class="text-black mb-4">निशुल्क चिकित्सा शिविर और स्वास्थ्य जांच।</p>
+      </div>
+    </div>
+
+    <div class="group relative rounded-xl overflow-hidden cursor-pointer">
+      <img src="./assets/gallery5.jpg" alt="Women Empowerment" class="w-full h-full object-cover transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-b from-yellow-400/90 via-yellow-400/90 to-black/95 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 text-center p-4">
+        <h3 class="text-xl font-semibold mb-2">Women Empowerment</h3>
+        <p class="text-black mb-4">महिला समूहों को आत्मनिर्भर बनाने के कार्य।</p>
+      </div>
+    </div>
+
+    <div class="group relative rounded-xl overflow-hidden cursor-pointer">
+      <img src="./assets/gallery3.jpg" alt="Digital India" class="w-full h-full object-cover transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-b from-yellow-400/90 via-yellow-400/90 to-black/95 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 text-center p-4">
+        <h3 class="text-xl font-semibold mb-2">Digital Initiatives</h3>
+        <p class="text-black mb-4">डिजिटल सेवाओं का विस्तार और प्रशिक्षण।</p>
+      </div>
+    </div>
+  </section>
+
+
+<section class="bg-bgSection text-white py-20">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row md:items-center items-start">
+    <!-- Text -->
+    <h2 class="flex-grow md:pr-12 text-2xl md:text-3xl font-bold mb-6 md:mb-0 tracking-tight">
+      आपके <span class="text-yellow-400">सपनों के विकास</span> की यात्रा में,<br class="hidden md:block">
+      हम हर कदम पर साथ हैं।
+    </h2>
+    <!-- Button -->
+    <a
+      href="./index.html#contact"
+      class="flex-shrink-0 inline-flex items-center justify-center bg-yellow-400 text-black font-semibold px-8 py-3 rounded-full hover:scale-105 transition"
+    >
+      अभी संपर्क करें
+    </a>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+ <footer class="bg-black border-t border-gray-800 py-6">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+    <p class="text-gray-400 text-sm">© 2025 Rajiv Kumar Singh. All rights reserved.</p>
+    <div class="flex space-x-4 mt-4 md:mt-0">
+      <a href="#" class="text-gray-400 hover:text-[#E6B400] text-xl">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" class="text-gray-400 hover:text-[#E6B400] text-xl">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" class="text-gray-400 hover:text-[#E6B400] text-xl">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="text-gray-400 hover:text-[#E6B400] text-xl">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
